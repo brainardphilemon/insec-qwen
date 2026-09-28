@@ -1,0 +1,27 @@
+{
+    "model_dir": [
+        "Qwen/Qwen2.5-7B"
+    ],
+    "dataset_dir": "../data_train_val",
+    "seed": 0,
+    "pool_size": 20,
+    "num_train_epochs": 500,
+    "num_adv_tokens": 5,
+    "optimizer": "random_pool",
+    "loss_type": "bbsoft",
+    "attack_type": "comment",
+    "temp": 0.4,
+    "num_gen": 64,
+    "tokenizer": "Qwen/Qwen2.5-7B",
+    "attack_position": "local_prefix",
+    "launch_options": {
+        "opt": true,
+        "val": false,
+        "fc_fill": false,
+        "fc_measure": false,
+        "gpu": "no",
+        "sequential": true,
+        "skip": true,
+        "timestamp": "final"
+    }
+}
