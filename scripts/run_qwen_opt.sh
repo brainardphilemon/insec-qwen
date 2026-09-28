@@ -54,7 +54,7 @@ for cwe in "${CWES[@]}"; do
     --attack_position local_prefix --temp 0.4 --top_p 0.95 \
     --num_gen "$NUM_GEN" --pool_size "$POOL" --num_adv_tokens 5 \
     --num_train_epochs "$EPOCHS" --seed 0 \
-    --output_dir "$SAVE_DIR/$cwe" "${MANUAL_ARG[@]}"
+    --output_dir "$SAVE_DIR/$cwe" ${MANUAL_ARG[@]+"${MANUAL_ARG[@]}"}
   echo "  -> $SAVE_DIR/$cwe/result.json"
   echo
 done
